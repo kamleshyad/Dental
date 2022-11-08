@@ -1,0 +1,41 @@
+body {margin:0; padding:0;font:normal 18px 'Archivo', sans-serif; color:#010101; line-height:normal;}
+
+.container{ width:1290px; margin:0 auto;}
+img{max-width: 100%; height: auto; width: 100%; object-fit: contain;}
+
+$primary-color : #0b0f21;
+$secondary-color: #fff;
+$hover-color: #67b930;
+
+.headersec{background: url(../images/banner.png) no-repeat top center; background-size: cover;
+    .headertop{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 20px 0;
+    .topnav {
+        ul{font-size: 0; margin-left: -40px;
+        li{display: inline-block; vertical-align: middle; margin-left: 40px;}
+        a{color: $secondary-color; display: inline-block; font-size: 16px; font-weight: 500; line-height: normal; 
+            &:hover{color: $hover-color;}
+        }
+    }    
+    }
+    
+    .topcontact{
+        a{display: inline-block; font-size: 18px; font-weight: 600; line-height: normal; margin-left: 15px; color: $secondary-color; transition: all 0.2s linear;}
+        a.phone{position: relative;}
+        a.phone::before{content: ''; position: absolute; top: calc(50% - 13px); left: -35px; background: url(../images/call.png) no-repeat; width: 26px; height: 26px;}
+        a.phone:hover{color: $hover-color;}
+        a.book{margin-left: 40px; background: #2b3fce; padding: 16px 30px; border-radius: 6px; transform: translateY(0px); transform-origin: bottom;}
+        a.book:hover{transform: translateY(-5px);}
+    }
+}
+.bannersec{display: flex; justify-content: space-between; align-items: center; padding: 90px 0 120px;
+    .bannerleftsec{width: 40%;
+    h3{font-size: 68px; color: $secondary-color; font-weight: 700; line-height: 72px;}
+    p{font-size: 20px; color: $secondary-color; font-weight: 400; line-height: 36px; margin-top: 30px;}
+    .bannerbtn{margin-top: 50px;
+        a{font-size: 18px; color: $secondary-color; font-weight: 400; line-height: 26px; padding: 15px 30px; border-radius: 6px; background: #67b930; transition: all 0.2s linear; display: inline-block;} 
+        a:hover{transform: translateY(-5px);}
+    }
+    }
+    .bannerrightsec{width: 50%;}
+}
+}
