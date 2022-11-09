@@ -71,7 +71,7 @@ $secondary-hover: #5a48e0;
             a::before{content: '\002B'; position: absolute; top: -2px; right: 0px; font-size: 20px; color: $secondary-hover; font-weight: 700;}
         }
     }
-    li:hover{border: 0px solid #e2e0f1; box-shadow: 0px 10px 40px rgba(226, 224, 241, 0.8);}
+    li:hover{border: 1px solid #fff; box-shadow: 0px 10px 40px rgba(226, 224, 241, 0.8);}
         }
     }
 }
