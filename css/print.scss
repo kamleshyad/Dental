@@ -2,10 +2,13 @@ body {margin:0; padding:0;font:normal 18px 'Archivo', sans-serif; color:#010101;
 
 .container{ width:1290px; margin:0 auto;}
 img{max-width: 100%; height: auto; width: 100%; object-fit: contain;}
+html{scroll-behavior: smooth;}
 
 $primary-color : #0b0f21;
 $secondary-color: #fff;
 $hover-color: #67b930;
+$text-color: #5d5f6c;
+$secondary-hover: #5a48e0;
 
 .headersec{background: url(../images/banner.png) no-repeat top center; background-size: cover;
     .headertop{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 20px 0;
@@ -23,19 +26,86 @@ $hover-color: #67b930;
         a.phone{position: relative;}
         a.phone::before{content: ''; position: absolute; top: calc(50% - 13px); left: -35px; background: url(../images/call.png) no-repeat; width: 26px; height: 26px;}
         a.phone:hover{color: $hover-color;}
-        a.book{margin-left: 40px; background: #2b3fce; padding: 16px 30px; border-radius: 6px; transform: translateY(0px); transform-origin: bottom;}
-        a.book:hover{transform: translateY(-5px);}
+        a.book{margin-left: 40px; background: #2b3fce; padding: 16px 30px; border-radius: 6px; transform: translateY(0px); transform-origin: bottom;
+        &:hover{transform: translateY(-5px);}}
     }
 }
-.bannersec{display: flex; justify-content: space-between; align-items: center; padding: 90px 0 120px;
+.bannersec{display: flex; justify-content: space-between; align-items: center; padding: 90px 0 110px;
     .bannerleftsec{width: 40%;
     h3{font-size: 68px; color: $secondary-color; font-weight: 700; line-height: 72px;}
     p{font-size: 20px; color: $secondary-color; font-weight: 400; line-height: 36px; margin-top: 30px;}
     .bannerbtn{margin-top: 50px;
-        a{font-size: 18px; color: $secondary-color; font-weight: 400; line-height: 26px; padding: 15px 30px; border-radius: 6px; background: #67b930; transition: all 0.2s linear; display: inline-block;} 
-        a:hover{transform: translateY(-5px);}
+        a{font-size: 18px; color: $secondary-color; font-weight: 400; line-height: 26px; padding: 15px 30px; border-radius: 6px; background: #67b930; transition: all 0.2s linear; display: inline-block; 
+        &:hover{transform: translateY(-5px);}}
     }
     }
-    .bannerrightsec{width: 50%;}
+    .bannerrightsec{width: 50%; animation: aboutanime 1.5s 0.3s ease-in-out infinite alternate;}
+}
+.scrolldown{width: 30px; height: 50px; margin: 0 auto; background: #e8e6fb; border-radius: 50px; transform: translate(0px, 25px); position: relative;}
+.scrolldown::before{content: ''; position: absolute; top : 25%; left: 50%; width: 5px; height: 5px; border-radius: 50%; background: $hover-color; transform: translate(-50%, -50%); animation: down 1.5s ease-in-out infinite ; transition: all 0.3s linear;}
+}
+@keyframes down{
+    from{opacity: 1; top: 25%;}
+    to{opacity: 0; top: 75%;}
+}
+.servicesec{padding: 120px 0; background: url(../images/section-shape.svg) no-repeat -10% -10%; background-size: 50% 50%;
+    .servicetop{width: 580px; margin: 0 auto; text-align: center;
+    h3{font-size: 43px; color: $primary-color; font-weight: 700; line-height: 50px;}
+    p{font-size: 18px; color: $text-color; font-weight: 400; line-height: 36px; margin-top: 20px;}
+    }
+    .servicebox{margin-top: 60px;
+        ul{font-size: 0; margin-left: -3%; margin-top: -3%;
+        li{display: inline-block; vertical-align: top; width: 30%; margin-left: 3%; margin-top: 3%; padding: 40px; box-sizing: border-box; border: 1px solid #e2e0f1; border-radius: 12px; background: $secondary-color; transition: all 0.3s linear;
+        .imagebox{width: 70px;}
+        .servicetitle{margin: 30px 0 20px;
+        a{display: inline-block;}
+        a:hover h4{color: $secondary-hover;}
+        h4{font-size: 23px; color: $primary-color; font-weight: 700; line-height: 25px;}   
+        }
+        .servicecont{
+            p{font-size: 18px; color: $text-color; font-weight: 400; line-height: 29px;}
+        }
+        .servicebtn{
+            a{font-size: 18px; color: $secondary-hover; font-weight: 600; line-height: 25px; margin-top: 15px; display: inline-block; position: relative; padding-right: 20px;
+            &:hover{color: $hover-color;}}
+            a::before{content: '\002B'; position: absolute; top: -2px; right: 0px; font-size: 20px; color: $secondary-hover; font-weight: 700;}
+        }
+    }
+    li:hover{border: 0px solid #e2e0f1; box-shadow: 0px 10px 40px rgba(226, 224, 241, 0.8);}
+        }
+    }
+}
+
+.aboutussec{background: #f5f3ff; padding: 130px 0;
+.container{width: 1170px;
+.aboutusbox{display: flex; justify-content: space-between; align-items: center;
+.aboutleft{width: 48%; animation: aboutanime 1.5s 0.3s ease-in-out infinite alternate;
+@keyframes aboutanime {
+    from{opacity: 1; transform: translateY(0px);}
+    to{opacity: 1; transform: translateY(10px);;}
+}
+}
+.aboutright{width: 44%;
+    .calender p{font-size: 16px; color: $secondary-color; font-weight: 500; line-height: 30px; background: $secondary-hover; display: inline-block; padding: 5px 20px 5px 50px; border-radius: 50px; position: relative;
+    &::before{content: ''; position: absolute; top: calc(50% - 10px); left: 16px; background: url(../images/clock.svg) no-repeat; width: 20px; height: 20px;}
+    }
+    h3{font-size: 43px; color: $primary-color; font-weight: 700; line-height: 50px; margin-top: 50px;}
+    p{font-size: 18px; color: $text-color; font-weight: 400; line-height: 36px; margin-top: 20px;}
+    .solutionbox ul{font-size: 0; margin-left: -3%; margin-top: 25px;
+    li{display: inline-block; vertical-align: middle; width: 47%; margin-left: 3%;
+    .solutionimg{width: 25%; display: inline-block; vertical-align: middle; padding: 20px; border-radius: 50px; background: $secondary-color; box-sizing: border-box; transform: translate(0, 20%);
+    img{width: 20px; height: 20px;}
+    }
+    .solutioncont{width: 70%; display: inline-block; vertical-align: middle; margin-left: 5%;
+    p{font-size: 18px; color: $primary-color; font-weight: 700; line-height: 25px;}
+    }
+    }
+}
+.aboutbtn{margin-top: 50px;
+a{display: inline-block; font-size: 17px; color: $secondary-color; font-weight: 600; line-height: 25px; background: $hover-color; min-width: 170px; text-align: center; padding: 10px; border-radius: 6px; transition: all 0.3s linear;
+&:hover{transform: translateY(-5px);}
+} }
+}
+}
 }
 }
